@@ -90,7 +90,7 @@
             font-size: 1rem;
             border-radius: 0.5rem 0 0 0.5rem;
             flex: 1;
-            min-width: 120px;
+            min-width: 150px; /* Increased width of select */
             margin-bottom: 0; /* Remove default margin-bottom */
         }
         @media (max-width: 768px) {
@@ -439,7 +439,7 @@
             <div class="tracking-form">
                 <select id="courier-partner" aria-label="Select Courier Partner">
                     <option value="">Select Courier</option>
-                    <option value="dtdc">DTDC</option>
+                    <option value="dtdc" selected>DTDC</option>
                     <option value="tpc">Professional Couriers</option>
                     <option value="bluedart">Blue Dart</option>
                     <option value="delhivery">Delhivery</option>
@@ -486,7 +486,7 @@
             const trackingStatus = document.getElementById("tracking-status");
 
             if (!courier) {
-                trackingStatus.textContent = "Please select acourier partner.";
+                trackingStatus.textContent ="Please select acourier partner.";
                 trackingStatus.className = "text-red-500";
                 return;
             }
