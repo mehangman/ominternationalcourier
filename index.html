@@ -77,7 +77,7 @@
             border-right: 1px solid #ccc;
             font-size: 1rem;
             border-radius: 0.5rem 0 0 0.5rem;
-            flex: 1; /* Added to make select take up available space */
+            flex: 1;
         }
 
         .tracking-form button {
@@ -161,22 +161,97 @@
             max-width: 80%;
             max-height: 80%;
         }
+
+        /* Styles for responsive header */
+        .header {
+            background-color: #blue-600;
+            color: #fff;
+            padding: 0.75rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            shadow-md;
+            position: sticky;
+            top: 0;
+            z-10;
+        }
+
+        .logo {
+            text-xl;
+            font-bold;
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            margin-right: 0.5rem;
+            border-radius: 50%;
+        }
+
+        .nav {
+            margin-right: 1rem;
+        }
+
+        .nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav ul li {
+            margin-left: 1rem;
+        }
+
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav ul li a:hover {
+            color: #yellow-300;
+        }
+
+        /* Media query for small screens */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .header {
+                justify-content: center;
+            }
+
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 769px) {
+            .nav {
+                display: block !important;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-gray-100">
-    <header class="bg-blue-600 text-white py-3 flex justify-between items-center shadow-md sticky top-0 z-10">
-        <div class="logo text-xl font-bold ml-4 flex items-center">
-            <img src="https://via.placeholder.com/50" alt="OM International Logo" class="mr-2 rounded-full">
+    <header class="header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50" alt="OM International Logo" class="rounded-full">
             <span class="text-yellow-400">OM</span> International
         </div>
-        <nav class="mr-4">
-            <ul class="flex space-x-4">
-                <li><a href="#services" class="hover:text-yellow-300 no-underline transition duration-300">Services</a></li>
-                <li><a href="#rates" class="hover:text-yellow-300 no-underline transition duration-300">Rates</a></li>
-                <li><a href="#contact" class="hover:text-yellow-300 no-underline transition duration-300">Contact</a></li>
-                <li><a href="#track-shipment" class="hover:text-yellow-300 no-underline transition duration-300">Track</a></li>
-                <li><a href="#partner-logos" class="hover:text-yellow-300 no-underline transition duration-300">Partners</a></li>
+        <nav class="nav">
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#rates">Rates</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#track-shipment">Track</a></li>
+                <li><a href="#partner-logos">Partners</a></li>
             </ul>
         </nav>
     </header>
@@ -193,8 +268,7 @@
                 <span class="delhi-focus">Operating from New Delhi</span>, we provide dedicated courier solutions with a
                 focus on customer satisfaction.
             </p>
-            <button
-                onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aDetails of Shipment:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'"
+            <button onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aDetails of Shipment:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'"
                 class="bg-yellow-500 hover:bg-yellow-600 text-blue-700 font-semibold rounded-full shadow-md py-2 px-4 transition duration-300 text-lg">
                 Get a Quote
             </button>
