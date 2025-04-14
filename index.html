@@ -178,6 +178,7 @@
             position: sticky;
             top: 0;
             z-index: 10;
+            width: 100%;
         }
 
         .logo {
@@ -191,7 +192,8 @@
         .logo img {
             margin-right: 0.5rem;
             border-radius: 50%;
-            height: 30px; /* Reduced logo height */
+            height: 30px;
+            /* Reduced logo height */
         }
 
         .nav {
@@ -298,6 +300,45 @@
                 display: none;
             }
         }
+
+        #about-us {
+            background-color: #f0f0f0;
+        }
+
+        .about-us-content {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        .about-us-content h2 {
+            color: #1e293b;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .about-us-content p {
+            color: #4b5563;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .about-us-content ul {
+            list-style: disc;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-us-content ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            color: #4b5563;
+        }
     </style>
 </head>
 
@@ -367,8 +408,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img
-                            src="https://static.vecteezy.com/system/resources/previews/004/331/629/non_2x/parcel-tracking-green-flat-design-long-shadow-glyph-icon-package-location-monitoring-order-status-postal-tracking-delivery-service-cardboard-box-with-map-pin-silhouette-illustration-vector.jpg"
+                        <img src="https://static.vecteezy.com/system/resources/previews/004/331/629/non_2x/parcel-tracking-green-flat-design-long-shadow-glyph-icon-package-location-monitoring-order-status-postal-tracking-delivery-service-cardboard-box-with-map-pin-silhouette-illustration-vector.jpg"
                             alt="Tracking">
                     </div>
                     <h3>State-of-the-Art Tracking</h3>
@@ -378,8 +418,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img
-                            src="https://w7.pngwing.com/pngs/105/727/png-transparent-network-people-business-icon-social-friends-connection-networking-social-network-relationships.png"
+                        <img src="https://w7.pngwing.com/pngs/105/727/png-transparent-network-people-business-icon-social-friends-connection-networking-social-network-relationships.png"
                             alt="Network">
                     </div>
                     <h3>Extensive Network</h3>
@@ -399,7 +438,8 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/14367/14367953.png" alt="Franchise Adaptability">
+                        <img src="https://cdn-icons-png.flaticon.com/512/14367/14367953.png"
+                            alt="Franchise Adaptability">
                     </div>
                     <h3>Adaptability to Franchises</h3>
                     <p>
@@ -558,7 +598,7 @@
             </div>
         </section>
 
-        <sectionid="partner-logos" class="section bg-gray-100 py-12 px-4 text-center">
+        <section id="partner-logos" class="section bg-gray-100 py-12 px-4 text-center">
             <h2 class="text-2xl font-bold mb-6 text-blue-700">Our Partners</h2>
             <div class="flex justify-center space-x-4 flex-wrap gap-4">
                 <img class="logo-img white-logo" src="https://www.dtdc.in/img/logos/logo.png" alt="DTDC Logo"
@@ -578,33 +618,36 @@
             </div>
         </section>
 
-        <section id="about-us" class="section bg-blue-100 py-12 px-4 text-center rounded-md">
-            <h2 class="text-2xl font-bold mb-6 text-blue-700">About Us</h2>
-            <div class="about-us-content bg-white rounded-md shadow-md p-6 max-w-4xl mx-auto text-left">
-                <p class="text-lg text-gray-700 mb-4">
+        <section id="about-us" class="section">
+            <div class="about-us-content">
+                <h2 class="text-2xl font-bold mb-6 text-blue-700">About Us</h2>
+                <p>
                     Welcome to OM International, a leading courier service provider committed to delivering excellence in
                     logistics solutions. With years of experience, we have established ourselves as a trusted partner for
                     businesses and individuals seeking reliable and efficient delivery services.
                 </p>
-                <p class="text-lg text-gray-700 mb-4">
+                <p>
                     Our mission is to provide seamless and secure courier services, ensuring that your shipments reach their
                     destination on time, every time. We understand the importance of your parcels, and we go the extra mile
                     to handle them with utmost care and professionalism.
                 </p>
-                <p class="text-lg text-gray-700 mb-4">
+                <p>
                     <strong>Our Core Values</strong>
                 </p>
-                <ul class="list-disc list-inside text-gray-700 mb-4">
+                <ul>
                     <li><strong>Reliability:</strong> We are committed to providing dependable and consistent services.</li>
                     <li><strong>Efficiency:</strong> We optimize our processes to ensure speedy and timely delivery.</li>
-                    <li><strong>Customer Focus:</strong> We prioritize customer satisfaction and strive to exceed expectations.</li>
-                    <li><strong>Integrity:</strong> We conduct our business with honesty, transparency, and ethical practices.</li>
-                    <li><strong>Innovation:</strong> We embrace technology and innovative solutions to enhance our services.</li>
+                    <li><strong>Customer Focus:</strong> We prioritize customer satisfaction and strive to exceed
+                        expectations.</li>
+                    <li><strong>Integrity:</strong> We conduct our business with honesty, transparency, and ethical practices.
+                    </li>
+                    <li><strong>Innovation:</strong> We embrace technology and innovative solutions to enhance our
+                        services.</li>
                 </ul>
-                <p class="text-lg text-gray-700 mb-4">
+                <p>
                     <strong>Why Choose Us?</strong>
                 </p>
-                <ul class="list-disc list-inside text-gray-700">
+                <ul>
                     <li>Extensive network across domestic and international locations</li>
                     <li>State-of-the-art tracking system for real-time updates</li>
                     <li>Customized solutions to meet specific requirements</li>
@@ -700,7 +743,11 @@
 
             // Here, you would typically use AJAX (fetch or XMLHttpRequest) to send the data to a server-side script (e.g., PHP, Node.js)
             // For this example, I'll just simulate a successful submission:
-            console.log('Form Data:', { name, email, message }); // Replace with actual submission logic
+            console.log('Form Data:', {
+                name,
+                email,
+                message
+            }); // Replace with actual submission logic
 
             alert('Your message has been sent. We will contact you shortly.'); // Replace with a better UI notification
             document.getElementById('contactForm').reset(); // Clear the form
