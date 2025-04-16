@@ -528,45 +528,77 @@
             </p>
         </section>
 
-        <section id="contact" class="section bg-gradient-to-br from-purple-100 to-blue-100 py-12 px-4 text-center rounded-md">
-            <h2 class="text-2xl font-bold mb-6 text-blue-700">Contact Us</h2>
-            <div class="contact-info bg-white rounded-md shadow-md p-6 max-w-md mx-auto">
-                <p class="text-lg text-indigo-700 mb-4">
-                    <strong>Get a Quote / More Information</strong>
-                </p>
-                <p class="text-gray-700 mb-4">
-                    To request a quote or inquire about our services, please reach out to us via:
-                </p>
-                <div class="flex justify-center items-center gap-4">
-                    <div>
-                        <strong>Phone:</strong>
-                        <a href="tel:+919560264547" class="text-blue-500 hover:text-blue-700 no-underline">
-                            +91 9560264547
-                        </a>,
-                        <a href="tel:+918766338468" class="text-blue-500 hover:text-blue-700 no-underline">
-                            +91 8766338468
-                        </a>
+        <section id="contact" class="section relative py-16 px-4 text-center overflow-hidden">
+            <!-- Background image with overlay -->
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1603138461440-2680c9f3eb65?ixlib=rb-1.2.1&auto=format&fit=crop&w=1800')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
+        
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400 drop-shadow-md">
+                    Get In Touch
+                </h2>
+        
+                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/10 shadow-xl max-w-md mx-auto">
+                    <p class="text-lg text-gray-200 mb-6">
+                        Reach out for quotes, support, or partnership opportunities
+                    </p>
+        
+                    <div class="space-y-4 text-gray-300">
+                        <div class="contact-method">
+                            <strong class="block text-yellow-400 mb-1">Phone:</strong>
+                            <a href="tel:+919560264547" class="hover:text-yellow-300 transition-colors">
+                                +91 9560264547
+                            </a>, 
+                            <a href="tel:+918766338468" class="hover:text-yellow-300 transition-colors">
+                                +91 8766338468
+                            </a>
+                        </div>
+        
+                        <div class="contact-method">
+                            <strong class="block text-yellow-400 mb-1">Email:</strong>
+                            <a href="mailto:ominternationalcep@gmail.com" 
+                               class="hover:text-yellow-300 transition-colors break-all">
+                                ominternationalcep@gmail.com
+                            </a>
+                        </div>
+        
+                        <div class="contact-method mt-6">
+                            <strong class="block text-yellow-400 mb-2">Office Address:</strong>
+                            <p class="text-gray-200 leading-relaxed">
+                                253, A/6, 2nd Floor<br>
+                                Shahpur Jat, New Delhi-110049
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center items-center mt-4">
-                    <div>
-                        <strong>Email:</strong>
-                        <a href="mailto:ominternationalcep@gmail.com"
-                            class="text-blue-500 hover:text-blue-700 no-underline">
-                            ominternationalcep@gmail.com
-                        </a>
-                    </div>
-                </div>
-                <br />
-                <p class="text-gray-700">
-                    Our team is ready to assist you with your courier needs. We are located at:
-                </p>
-                <p class="text-indigo-700 mt-4">
-                    253, A/6, 2nd Floor, Shahpur Jat, New Delhi-110049
-                </p>
             </div>
-        </section>
-
+        </style>
+        
+        <style>
+            /* Consistent header spacing */
+            #contact {
+                padding-top: 6rem;
+                scroll-margin-top: 5rem;
+            }
+        
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                #contact {
+                    padding-top: 4rem;
+                    scroll-margin-top: 4rem;
+                }
+                
+                .contact-method {
+                    font-size: 0.95rem;
+                }
+            }
+        
+            /* Hover transitions */
+            a {
+                transition: color 0.3s ease;
+            }
+        </style>
+            
         <section id="track-shipment" class="tracking-section">
             <h2 class="text-2xl font-bold mb-4 text-blue-700">Track Your Shipment</h2>
             <p class="text-lg text-gray-700 mb-6">
