@@ -294,20 +294,21 @@
 
     <main>
         <section
-            class="hero bg-cover bg-no-repeat bg-center text-gray-800 text-center py-12 px-4 rounded-md flex flex-col justify-center items-center"
+            class="hero bg-cover bg-no-repeat bg-center text-gray-800 text-center py-12 px-4 rounded-md flex flex-col justify-center items-center relative overflow-hidden"
             style="background-image: url('https://static.vecteezy.com/system/resources/previews/004/245/900/non_2x/delivery-service-truck-3d-rendering-background-design-isolate-on-yellow-background-free-photo.jpg')">
-            <h1 class="text-3xl font-bold mb-4 text-blue-700">Your Trusted Courier Partner</h1>
-            <p class="text-lg mb-6 text-gray-700 max-w-2xl">
-                Reliable and efficient courier services for domestic and international shipments. We ensure safe and timely
-                delivery of your parcels.
+            <!-- Background overlay with blur -->
+            <div class="absolute inset-0 bg-white/70 backdrop-blur-sm z-0"></div>
+    
+            <h1 class="text-3xl font-bold mb-4 text-blue-800 relative z-10">Your Trusted Courier Partner</h1>
+            <p class="text-lg mb-6 text-gray-800 max-w-2xl relative z-10">
+                Reliable and efficient courier services for domestic and international shipments. We ensure safe and timely delivery of your parcels.
             </p>
-            <p class="text-md mb-4 text-gray-600">
-                <span class="delhi-focus">Operating from New Delhi</span>, we provide dedicated courier solutions with a
-                focus on customer satisfaction.
+            <p class="text-md mb-4 text-gray-700 relative z-10">
+                <span class="delhi-focus">Operating from New Delhi</span>, we provide dedicated courier solutions with a focus on customer satisfaction.
             </p>
             <button
                 onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'"
-                class="bg-yellow-500 hover:bg-yellow-600 text-blue-700 font-semibold rounded-full shadow-md py-2 px-4 transition duration-300 text-lg">
+                class="bg-yellow-500 hover:bg-yellow-600 text-blue-800 font-semibold rounded-full shadow-md py-2 px-4 transition duration-300 text-lg relative z-10">
                 Get a Quote
             </button>
         </section>
