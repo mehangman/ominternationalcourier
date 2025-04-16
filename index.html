@@ -3,7 +3,8 @@
 
 <head>
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <meta name="description" content="OM International Courier offers reliable domestic and international shipping services from New Delhi. Track shipments, get quotes, and explore our partner network.">
+    <meta name="description"
+        content="OM International Courier offers reliable domestic and international shipping services from New Delhi. Track shipments, get quotes, and explore our partner network.">
     <link rel="canonical" href="https://ominternationalcourier.pages.dev/" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -116,7 +117,9 @@
 
         /* Services Section */
         #services {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background-image: url('https://images.unsplash.com/photo-1531891812102-b88954798901?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
         }
 
         .service-grid {
@@ -161,7 +164,9 @@
 
         /* Service Areas Section */
         #area {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background-image: url('https://images.unsplash.com/photo-1563986768-19f071494175?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
         }
 
         #area .bg-white {
@@ -178,12 +183,43 @@
 
         /* Tracking Section */
         .tracking-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
         }
 
         .tracking-form {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .tracking-form select,
+        .tracking-form button {
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .tracking-form button {
+            background-color: #f59e0b;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tracking-form button:hover {
+            background-color: #d97706;
         }
 
         /* Partners Section */
@@ -191,15 +227,45 @@
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
         }
 
+        .logo-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 1rem 0;
+            gap: 1rem;
+        }
+
         .logo-img {
-            background: rgba(255, 255, 255, 0.1) !important;
-            padding: 1rem !important;
-            border-radius: 0.5rem !important;
+            padding: 1rem;
+            border-radius: 0.5rem;
             transition: all 0.3s ease;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 150px;
         }
 
         .logo-img:hover {
             transform: scale(1.05) rotate(-2deg);
+        }
+
+        .white-logo {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .gold-logo {
+            background-color: #FFD700;
+        }
+
+        .black-logo {
+            background-color: #000;
+        }
+
+        .purple-logo {
+            background-color: #800080;
         }
 
         /* Responsive Styles */
@@ -232,6 +298,28 @@
             .service-card {
                 padding: 1.5rem;
             }
+
+            .tracking-form {
+                width: 95%;
+            }
+
+            .logo-grid {
+                flex-wrap: wrap;
+                overflow-x: auto;
+            }
+
+            .logo-img {
+                min-width: 120px;
+                height: 60px;
+            }
+        }
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 4rem;
         }
     </style>
 </head>
@@ -257,7 +345,6 @@
         <section
             class="hero bg-cover bg-no-repeat bg-center text-center py-12 px-4 rounded-md flex flex-col justify-center items-center relative overflow-hidden min-h-[500px]"
             style="background-image: url('https://img.pikbest.com/backgrounds/20200423/2d-labor-day-delivery-banner_1910020.jpg!sw800')">
-            <!-- Dark overlay with subtle blur -->
             <div class="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>
 
             <div class="relative z-10 max-w-4xl w-full px-4 space-y-6">
@@ -280,12 +367,13 @@
             </div>
         </section>
 
-        <section id="services" class="section bg-gray-100 py-12 px-4 text-center rounded-md">
+        <section id="services" class="section text-center rounded-md">
             <h2 class="text-2xl font-bold mb-6 text-blue-700">Our Services</h2>
             <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://images.seeklogo.com/logo-png/48/2/food-delivery-symbol-logo-png_seeklogo-486549.png" alt="Domestic Delivery">
+                        <img src="https://images.seeklogo.com/logo-png/48/2/food-delivery-symbol-logo-png_seeklogo-486549.png"
+                            alt="Domestic Delivery">
                     </div>
                     <h3>Domestic Courier Services</h3>
                     <p>
@@ -303,8 +391,8 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img
-                            src="https://png.pngtree.com/png-clipart/20230427/original/pngtree-tracking-line-icon-png-image_9117400.png" alt="Tracking">
+                        <img src="https://png.pngtree.com/png-clipart/20230427/original/pngtree-tracking-line-icon-png-image_9117400.png"
+                            alt="Tracking">
                     </div>
                     <h3>State-of-the-Art Tracking</h3>
                     <p>
@@ -313,8 +401,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img
-                            src="https://www.pngall.com/wp-content/uploads/13/Network-People.png" alt="Network">
+                        <img src="https://www.pngall.com/wp-content/uploads/13/Network-People.png" alt="Network">
                     </div>
                     <h3>Extensive Network</h3>
                     <p>
@@ -342,86 +429,84 @@
             </div>
         </section>
 
-        <!-- Rates Section -->
-        <section id="rates" class="section relative py-16 px-4 text-center overflow-hidden" 
-                 style="scroll-margin-top: 100px;">
-            <!-- Background & Overlay -->
-            <div class="absolute inset-0 bg-[url('https://previews.123rf.com/images/gmast3r/gmast3r1604/gmast3r160400443/55343577-truck-lorry-car-on-road-cargo-shipping-delivery-banner-flat-vector-illustration.jpg')] bg-cover bg-center"></div>
+        <section id="rates" class="section relative py-16 px-4 text-center overflow-hidden"
+            style="scroll-margin-top: 100px;">
+            <div
+                class="absolute inset-0 bg-[url('https://previews.123rf.com/images/gmast3r/gmast3r1604/gmast3r160400443/55343577-truck-lorry-car-on-road-cargo-shipping-delivery-banner-flat-vector-illustration.jpg')] bg-cover bg-center">
+            </div>
             <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
-        
+
             <div class="relative z-10 max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-yellow-400 drop-shadow-md">
                     Competitive Shipping Rates
                 </h2>
-                
+
                 <div class="space-y-6 px-4">
                     <p class="text-lg md:text-xl text-gray-100 leading-relaxed max-w-3xl mx-auto">
-                        For immediate rate confirmation on finalized shipments, submit your particulars using our structured template:
+                        For immediate rate confirmation on finalized shipments, submit your particulars using our structured
+                        template:
                     </p>
-        
+
                     <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
-                        <button 
+                        <button
                             onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Courier Rate Request - Shipment Particulars&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request the current rate for my shipment based on the following particulars:%0d%0a%0d%0a[ Pickup Details ]%0d%0aCompany Name: %0d%0aContact Person: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Delivery Details ]%0d%0aRecipient Name: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Shipment Particulars ]%0d%0aType: (Document/Parcel)%0d%0aWeight: %0d%0aDimensions: %0d%0aContents: %0d%0aDeclared Value: %0d%0aSpecial Instructions: %0d%0a%0d%0aPlease confirm your rate and service availability for this specific shipment.%0d%0a%0d%0aContact Information:%0d%0aName: %0d%0aEmail: %0d%0aPhone: %0d%0a%0d%0aBest regards,%0d%0a[Your Full Name]'"
-                            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full 
-                                   hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 
-                                   shadow-lg hover:shadow-xl transform hover:scale-105 text-lg md:text-xl">
+                            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full                                 hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300                                 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg md:text-xl">
                             Request Rate Details
                         </button>
                     </div>
-        
+
                     <p class="text-gray-300 mt-6 text-md md:text-lg max-w-3xl mx-auto">
-                        For complex requirements or premium services, visit our 
-                        <a href="#contact" class="text-yellow-400 hover:text-yellow-300 underline" 
-                           onclick="smoothScroll('contact')">Contact Section</a> 
+                        For complex requirements or premium services, visit our
+                        <a href="#contact" class="text-yellow-400 hover:text-yellow-300 underline"
+                            onclick="smoothScroll('contact')">Contact Section</a>
                         for personalized assistance
                     </p>
                 </div>
             </div>
         </section>
-        
-        <!-- Smooth Scroll Script -->
+
         <script>
-        function smoothScroll(targetId) {
-            const element = document.getElementById(targetId);
-            const offset = 100; // Adjust this value based on header height
-            const bodyRect = document.body.getBoundingClientRect().top;
-            const elementRect = element.getBoundingClientRect().top;
-            const elementPosition = elementRect - bodyRect;
-            const offsetPosition = elementPosition - offset;
-        
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+            function smoothScroll(targetId) {
+                const element = document.getElementById(targetId);
+                const offset = 100; // Adjust this value based on header height
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = element.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
         </script>
-        
+
         <style>
-        /* Header Spacing Fix */
-        #rates {
-            padding-top: 6rem;
-            scroll-margin-top: 5rem;
-        }
-        
-        .header {
-            z-index: 1000;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
+            /* Header Spacing Fix */
             #rates {
-                padding-top: 4rem;
-                scroll-margin-top: 4rem;
+                padding-top: 6rem;
+                scroll-margin-top: 5rem;
             }
-            
-            button {
-                padding: 0.75rem 1.5rem;
-                font-size: 1rem;
+
+            .header {
+                z-index: 1000;
             }
-        }
+
+            /* Responsive Adjustments */
+            @media (max-width: 768px) {
+                #rates {
+                    padding-top: 4rem;
+                    scroll-margin-top: 4rem;
+                }
+
+                button {
+                    padding: 0.75rem 1.5rem;
+                    font-size: 1rem;
+                }
+            }
         </style>
 
-        <section id="area" class="section bg-gray-100 py-12 px-4 text-center rounded-md">
+        <section id="area" class="section text-center rounded-md">
             <h2 class="text-2xl font-bold mb-6 text-blue-700">Service Areas</h2>
             <p class="text-lg text-gray-700 mb-4">
                 We operate primarily from New Delhi, with a strong network to serve a wide range of locations.
@@ -443,8 +528,7 @@
                 <div class="bg-white rounded-md shadow-md p-4 text-center w-48 hover:shadow-lg transition-duration-300">
                     <h3 class="font-semibold text-blue-600 mb-2">East India</h3>
                     <ul style="text-align: left" class="list-disc list-inside text-gray-700">
-                        <li>Bihar</li>
-                        <li>Jharkhand</li>
+                        <li>Bihar</li><li>Jharkhand</li>
                         <li>West Bengal</li>
                         <li>Odisha</li>
                         <li>North East States</li>
@@ -478,39 +562,40 @@
         </section>
 
         <section id="contact" class="section relative py-16 px-4 text-center overflow-hidden">
-            <!-- Background image with overlay -->
-            <div class="absolute inset-0 bg-[url('https://t4.ftcdn.net/jpg/05/86/20/87/360_F_586208777_ff5IARSx9mR3y3hmfMYDTrQyQE4cA5nY.jpg')] bg-cover bg-center"></div>
+            <div
+                class="absolute inset-0 bg-[url('https://t4.ftcdn.net/jpg/05/86/20/87/360_F_586208777_ff5IARSx9mR3y3hmfMYDTrQyQE4cA5nY.jpg')] bg-cover bg-center">
+            </div>
             <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
-        
+
             <div class="relative z-10 max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400 drop-shadow-md">
                     Get In Touch
                 </h2>
-        
+
                 <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/10 shadow-xl max-w-md mx-auto">
                     <p class="text-lg text-gray-200 mb-6">
                         Reach out for quotes, support, or partnership opportunities
                     </p>
-        
+
                     <div class="space-y-4 text-gray-300">
                         <div class="contact-method">
                             <strong class="block text-yellow-400 mb-1">Phone:</strong>
                             <a href="tel:+919560264547" class="hover:text-yellow-300 transition-colors">
                                 +91 9560264547
-                            </a>, 
+                            </a>,
                             <a href="tel:+918766338468" class="hover:text-yellow-300 transition-colors">
                                 +91 8766338468
                             </a>
                         </div>
-        
+
                         <div class="contact-method">
                             <strong class="block text-yellow-400 mb-1">Email:</strong>
-                            <a href="mailto:ominternationalcep@gmail.com" 
-                               class="hover:text-yellow-300 transition-colors break-all">
+                            <a href="mailto:ominternationalcep@gmail.com"
+                                class="hover:text-yellow-300 transition-colors break-all">
                                 ominternationalcep@gmail.com
                             </a>
                         </div>
-        
+
                         <div class="contact-method mt-6">
                             <strong class="block text-yellow-400 mb-2">Office Address:</strong>
                             <p class="text-gray-200 leading-relaxed">
@@ -522,8 +607,8 @@
                 </div>
             </div>
         </section>
-            
-        <section id="track-shipment" class="tracking-section">
+
+        <section id="track-shipment" class="tracking-section py-16 px-4 text-center">
             <h2 class="text-2xl font-bold mb-4 text-blue-700">Track Your Shipment</h2>
             <p class="text-lg text-gray-700 mb-6">
                 Select a courier partner to track your shipment.
@@ -542,15 +627,20 @@
             </div>
         </section>
 
-        <section id="partner-logos" class="section bg-gray-100 py-12 px-4 text-center">
+        <section id="partner-logos" class="section text-center">
             <h2 class="text-2xl font-bold mb-6 text-blue-700">Our Partners</h2>
-            <div class="flex justify-center space-x-4 flex-wrap gap-4">
+            <div class="logo-grid">
                 <img class="logo-img white-logo" src="https://www.dtdc.in/img/logos/logo.png" alt="DTDC Logo">
                 <img class="logo-img white-logo" src="https://www.tpcindia.com/images/logo.png" alt="Professional Couriers Logo">
-                <img class="logo-img gold-logo" src="https://www.bluedart.com/image/layout_set_logo?img_id=1414225&t=1743950364083" alt="BlueDart Logo">
-                <img class="logo-img black-logo" src="https://www.delhivery.com/_nuxt/img/Delhivery_logo.dcef706.png" alt="Delhivery Logo">
-                <img class="logo-img purple-logo" src="https://www.fedex.com/content/dam/fedex-com/logos/logo.png" alt="FedEx Logo">
-                <img class="logo-img white-logo" src="https://www.aramex.com/Sitefinity/WebsiteTemplates/aramex/App_Themes/aramex/Images/Aramex%20logo%20English.webp" alt="Aramex Logo">
+                <img class="logo-img gold-logo" src="https://www.bluedart.com/image/layout_set_logo?img_id=1414225&t=1743950364083"
+                    alt="BlueDart Logo">
+                <img class="logo-img black-logo" src="https://www.delhivery.com/_nuxt/img/Delhivery_logo.dcef706.png"
+                    alt="Delhivery Logo">
+                <img class="logo-img purple-logo" src="https://www.fedex.com/content/dam/fedex-com/logos/logo.png"
+                    alt="FedEx Logo">
+                <img class="logo-img white-logo"
+                    src="https://www.aramex.com/Sitefinity/WebsiteTemplates/aramex/App_Themes/aramex/Images/Aramex%20logo%20English.webp"
+                    alt="Aramex Logo">
             </div>
         </section>
     </main>
