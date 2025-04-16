@@ -29,6 +29,16 @@
         "image": "https://i.pinimg.com/736x/88/0d/09/880d092406f5fa5f08b2074c6787eaf4.jpg"
     }
     </script>
+    
+    <script>
+        function smoothScroll(targetId) {
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
+    
     <style>
         .header {
             background-color: #000;
@@ -131,6 +141,31 @@
             font-weight: bold;
             color: #e65100;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Fix header overlap */
+        #rates {
+            padding-top: 5rem; /* Adjusted for sticky header */
+            scroll-margin-top: 4rem; /* Space for header */
+        }
+    
+        /* Enhanced responsive padding */
+        @media (min-width: 768px) {
+            #rates {
+                padding-top: 7rem;
+                scroll-margin-top: 5rem;
+            }
+        }
+    
+        /* Header z-index fix */
+        .header {
+            z-index: 50 !important; /* Ensure header stays on top */
+        }
+    
+        /* Button transition polish */
+        button {
+            transition-property: transform, box-shadow, background;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .logo-img {
@@ -395,12 +430,12 @@
 
         <section id="rates" class="section relative pt-20 pb-16 px-4 text-center overflow-hidden">
             <!-- Background with subtle pattern -->
-            <div class="absolute inset-0 bg-[url('https://img.freepik.com/free-vector/dark-gradient-texture_79603-1642.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-[url('https://thumbs.dreamstime.com/b/truck-lorry-car-road-cargo-shipping-delivery-banner-flat-vector-illustration-70014458.jpg"></div>
             <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-sm"></div>
         
             <div class="relative z-10 max-w-4xl mx-auto">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 text-yellow-400 drop-shadow-lg">
-                    Transparent Pricing Structure
+                    Rate Structure
                 </h2>
                 
                 <div class="space-y-6 px-4">
@@ -432,42 +467,6 @@
                 </div>
             </div>
         </section>
-        
-        <script>
-            function smoothScroll(targetId) {
-                document.getElementById(targetId).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        </script>
-        
-        <style>
-            /* Fix header overlap */
-            #rates {
-                padding-top: 5rem; /* Adjusted for sticky header */
-                scroll-margin-top: 4rem; /* Space for header */
-            }
-        
-            /* Enhanced responsive padding */
-            @media (min-width: 768px) {
-                #rates {
-                    padding-top: 7rem;
-                    scroll-margin-top: 5rem;
-                }
-            }
-        
-            /* Header z-index fix */
-            .header {
-                z-index: 50 !important; /* Ensure header stays on top */
-            }
-        
-            /* Button transition polish */
-            button {
-                transition-property: transform, box-shadow, background;
-                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            }
-        </style>
         
         <section id="area" class="section bg-gray-100 py-12 px-4 text-center rounded-md">
             <h2 class="text-2xl font-bold mb-6 text-blue-700">Service Areas</h2>
