@@ -294,23 +294,27 @@
 
     <main>
         <section
-            class="hero bg-cover bg-no-repeat bg-center text-gray-800 text-center py-12 px-4 rounded-md flex flex-col justify-center items-center relative overflow-hidden"
+            class="hero bg-cover bg-no-repeat bg-center text-center py-12 px-4 rounded-md flex flex-col justify-center items-center relative overflow-hidden min-h-[400px]"
             style="background-image: url('https://img.pikbest.com/backgrounds/20200423/2d-labor-day-delivery-banner_1910020.jpg!sw800')">
-            <!-- Background overlay with blur -->
-            <div class="absolute inset-0 bg-white/70 backdrop-blur-sm z-0"></div>
-    
-            <h1 class="text-3xl font-bold mb-4 text-blue-800 relative z-10">Your Trusted Courier Partner</h1>
-            <p class="text-lg mb-6 text-gray-800 max-w-2xl relative z-10">
-                Reliable and efficient courier services for domestic and international shipments. We ensure safe and timely delivery of your parcels.
-            </p>
-            <p class="text-md mb-4 text-gray-700 relative z-10">
-                <span class="delhi-focus">Operating from New Delhi</span>, we provide dedicated courier solutions with a focus on customer satisfaction.
-            </p>
-            <button
-                onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'"
-                class="bg-yellow-500 hover:bg-yellow-600 text-blue-800 font-semibold rounded-full shadow-md py-2 px-4 transition duration-300 text-lg relative z-10">
-                Get a Quote
-            </button>
+            <!-- Dark overlay with blur -->
+            <div class="absolute inset-0 bg-black/60 backdrop-blur-md z-0"></div>
+
+            <div class="relative z-10 max-w-4xl w-full px-4">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white drop-shadow-md">
+                    Your Trusted Courier Partner
+                </h1>
+                <p class="text-lg md:text-xl mb-6 text-gray-100 max-w-2xl mx-auto leading-relaxed">
+                    Reliable and efficient courier services for domestic and international shipments. We ensure safe and timely delivery of your parcels.
+                </p>
+                <p class="text-md md:text-lg mb-8 text-gray-200 font-medium">
+                    <span class="bg-white/10 px-3 py-1 rounded-full">Operating from New Delhi</span>
+                </p>
+                <button
+                    onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'"
+                    class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold rounded-full shadow-lg py-3 px-8 transition-all duration-300 text-lg md:text-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">
+                    Get a Quote
+                </button>
+            </div>
         </section>
 
         <section id="services" class="section bg-gray-100 py-12 px-4 text-center rounded-md">
