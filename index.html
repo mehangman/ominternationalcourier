@@ -331,64 +331,89 @@
             </div>
         </section>
 
-        <section id="services" class="section bg-gray-100 py-12 px-4 text-center rounded-md">
-            <h2 class="text-2xl font-bold mb-6 text-blue-700">Our Services</h2>
-            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://images.seeklogo.com/logo-png/48/2/food-delivery-symbol-logo-png_seeklogo-486549.png" alt="Domestic Delivery">
+        <section id="services" class="section py-16 px-4 text-center rounded-md relative overflow-hidden">
+            <!-- Section background pattern -->
+            <div class="absolute inset-0 bg-gray-900/95 z-0"></div>
+    
+            <h2 class="text-3xl font-bold mb-12 text-yellow-400 relative z-10 drop-shadow-md">Our Services</h2>
+            
+            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
+                <!-- Domestic Service -->
+                <div class="service-card group relative h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1603138461440-2680c9f3eb65?ixlib=rb-1.2.1&auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                    <div class="relative h-full flex flex-col items-center justify-end p-6 text-white">
+                        <img src="https://www.svgrepo.com/show/361274/domestic-delivery.svg" class="w-16 mb-4 filter drop-shadow-lg" alt="Domestic">
+                        <h3 class="text-2xl font-bold mb-3 drop-shadow-md">Domestic Courier</h3>
+                        <p class="text-gray-200 leading-relaxed drop-shadow-sm">
+                            Nationwide delivery with 24/7 tracking and guaranteed timelines
+                        </p>
                     </div>
-                    <h3>Domestic Courier Services</h3>
-                    <p>
-                        Fast and reliable delivery across India. Handling parcels of all categories with efficiency.
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.freepik.com/512/4003/4003701.png" alt="International Delivery">
+        
+                <!-- International Service -->
+                <div class="service-card group relative h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524850011238-e3f235771b8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                    <div class="relative h-full flex flex-col items-center justify-end p-6 text-white">
+                        <img src="https://www.svgrepo.com/show/361275/global-delivery.svg" class="w-16 mb-4 filter drop-shadow-lg" alt="International">
+                        <h3 class="text-2xl font-bold mb-3 drop-shadow-md">Global Shipping</h3>
+                        <p class="text-gray-200 leading-relaxed drop-shadow-sm">
+                            Worldwide logistics network with customs clearance support
+                        </p>
                     </div>
-                    <h3>International Courier Services</h3>
-                    <p>
-                        Expedited and reliable international courier options for global reach.
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img
-                            src="https://png.pngtree.com/png-clipart/20230427/original/pngtree-tracking-line-icon-png-image_9117400.png" alt="Tracking">
+        
+                <!-- Tracking Service -->
+                <div class="service-card group relative h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589939705380-518db7f8076c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                    <div class="relative h-full flex flex-col items-center justify-end p-6 text-white">
+                        <img src="https://www.svgrepo.com/show/361285/live-tracking.svg" class="w-16 mb-4 filter drop-shadow-lg" alt="Tracking">
+                        <h3 class="text-2xl font-bold mb-3 drop-shadow-md">Real-Time Tracking</h3>
+                        <p class="text-gray-200 leading-relaxed drop-shadow-sm">
+                            Live updates with predictive delivery analytics
+                        </p>
                     </div>
-                    <h3>State-of-the-Art Tracking</h3>
-                    <p>
-                        Real-time tracking facility for all consignments to maintain transparency.
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img
-                            src="https://www.pngall.com/wp-content/uploads/13/Network-People.png" alt="Network">
+        
+                <!-- Network Service -->
+                <div class="service-card group relative h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556740734-9f9ca6f82780?ixlib=rb-1.2.1&auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                    <div class="relative h-full flex flex-col items-center justify-end p-6 text-white">
+                        <img src="https://www.svgrepo.com/show/361283/network.svg" class="w-16 mb-4 filter drop-shadow-lg" alt="Network">
+                        <h3 class="text-2xl font-bold mb-3 drop-shadow-md">Pan-India Network</h3>
+                        <p class="text-gray-200 leading-relaxed drop-shadow-sm">
+                            5000+ service points across all Indian states
+                        </p>
                     </div>
-                    <h3>Extensive Network</h3>
-                    <p>
-                        Strong collaboration with franchises to maximize service coverage.
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/256/2752/2752481.png" alt="Custom Solutions">
+        
+                <!-- Custom Solutions -->
+                <div class="service-card group relative h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556742044-3c52d6e88c0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                    <div class="relative h-full flex flex-col items-center justify-end p-6 text-white">
+                        <img src="https://www.svgrepo.com/show/361282/custom-solutions.svg" class="w-16 mb-4 filter drop-shadow-lg" alt="Solutions">
+                        <h3 class="text-2xl font-bold mb-3 drop-shadow-md">Tailored Logistics</h3>
+                        <p class="text-gray-200 leading-relaxed drop-shadow-sm">
+                            Industry-specific supply chain solutions
+                        </p>
                     </div>
-                    <h3>Customized Solutions</h3>
-                    <p>
-                        Tailored offerings to cater to individual or business needs.
-                    </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/14367/14367953.png" alt="Franchise Adaptability">
+        
+                <!-- Franchise Network -->
+                <div class="service-card group relative h-80 rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1556742044-3c52d6e88c0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800')] bg-cover bg-center"></div>
+                    <div class="relative h-full flex flex-col items-center justify-end p-6 text-white">
+                        <img src="https://www.svgrepo.com/show/361281/franchise.svg" class="w-16 mb-4 filter drop-shadow-lg" alt="Franchise">
+                        <h3 class="text-2xl font-bold mb-3 drop-shadow-md">Franchise Partnership</h3>
+                        <p class="text-gray-200 leading-relaxed drop-shadow-sm">
+                            Collaborative logistics network integration
+                        </p>
                     </div>
-                    <h3>Adaptability to Franchises</h3>
-                    <p>
-                        Efficiently work in tandem with other franchises.
-                    </p>
                 </div>
             </div>
         </section>
