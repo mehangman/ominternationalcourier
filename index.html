@@ -241,11 +241,12 @@
             padding: 1rem;
             border-radius: 0.5rem;
             transition: all 0.3s ease;
-            height: 80px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 150px;
+            min-width: 120px;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         .logo-img:hover {
@@ -253,7 +254,7 @@
         }
 
         .white-logo {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: #fff;
         }
 
         .gold-logo {
@@ -320,6 +321,11 @@
             padding: 1rem;
             text-align: center;
             margin-top: 4rem;
+        }
+
+        #track-shipment {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
@@ -450,7 +456,7 @@
                     <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
                         <button
                             onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Courier Rate Request - Shipment Particulars&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request the current rate for my shipment based on the following particulars:%0d%0a%0d%0a[ Pickup Details ]%0d%0aCompany Name: %0d%0aContact Person: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Delivery Details ]%0d%0aRecipient Name: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Shipment Particulars ]%0d%0aType: (Document/Parcel)%0d%0aWeight: %0d%0aDimensions: %0d%0aContents: %0d%0aDeclared Value: %0d%0aSpecial Instructions: %0d%0a%0d%0aPlease confirm your rate and service availability for this specific shipment.%0d%0a%0d%0aContact Information:%0d%0aName: %0d%0aEmail: %0d%0aPhone: %0d%0a%0d%0aBest regards,%0d%0a[Your Full Name]'"
-                            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full                                 hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300                                 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg md:text-xl">
+                            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full                                     hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300                                     shadow-lg hover:shadow-xl transform hover:scale-105 text-lg md:text-xl">
                             Request Rate Details
                         </button>
                     </div>
@@ -528,7 +534,8 @@
                 <div class="bg-white rounded-md shadow-md p-4 text-center w-48 hover:shadow-lg transition-duration-300">
                     <h3 class="font-semibold text-blue-600 mb-2">East India</h3>
                     <ul style="text-align: left" class="list-disc list-inside text-gray-700">
-                        <li>Bihar</li><li>Jharkhand</li>
+                        <li>Bihar</li>
+                        <li>Jharkhand</li>
                         <li>West Bengal</li>
                         <li>Odisha</li>
                         <li>North East States</li>
@@ -632,11 +639,11 @@
             <div class="logo-grid">
                 <img class="logo-img white-logo" src="https://www.dtdc.in/img/logos/logo.png" alt="DTDC Logo">
                 <img class="logo-img white-logo" src="https://www.tpcindia.com/images/logo.png" alt="Professional Couriers Logo">
-                <img class="logo-img gold-logo" src="https://www.bluedart.com/image/layout_set_logo?img_id=1414225&t=1743950364083"
+                <img class="logo-img white-logo" src="https://www.bluedart.com/image/layout_set_logo?img_id=1414225&t=1743950364083"
                     alt="BlueDart Logo">
-                <img class="logo-img black-logo" src="https://www.delhivery.com/_nuxt/img/Delhivery_logo.dcef706.png"
+                <img class="logo-img white-logo" src="https://www.delhivery.com/_nuxt/img/Delhivery_logo.dcef706.png"
                     alt="Delhivery Logo">
-                <img class="logo-img purple-logo" src="https://www.fedex.com/content/dam/fedex-com/logos/logo.png"
+                <img class="logo-img white-logo" src="https://www.fedex.com/content/dam/fedex-com/logos/logo.png"
                     alt="FedEx Logo">
                 <img class="logo-img white-logo"
                     src="https://www.aramex.com/Sitefinity/WebsiteTemplates/aramex/App_Themes/aramex/Images/Aramex%20logo%20English.webp"
