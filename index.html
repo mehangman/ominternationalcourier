@@ -393,41 +393,81 @@
             </div>
         </section>
 
-        <section id="rates" class="section relative py-16 px-4 text-center rounded-md overflow-hidden">
-            <!-- Background image with overlay -->
-            <div class="absolute inset-0 bg-[url('https://thumbs.dreamstime.com/b/truck-lorry-car-road-cargo-shipping-delivery-banner-flat-vector-illustration-70014458.jpg')] bg-cover bg-center"></div>
-            <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
+        <section id="rates" class="section relative pt-20 pb-16 px-4 text-center overflow-hidden">
+            <!-- Background with subtle pattern -->
+            <div class="absolute inset-0 bg-[url('https://img.freepik.com/free-vector/dark-gradient-texture_79603-1642.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gray-900/70 backdrop-blur-sm"></div>
         
             <div class="relative z-10 max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-yellow-400 drop-shadow-md">
-                    Competitive Shipping Rates
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-yellow-400 drop-shadow-lg">
+                    Transparent Pricing Structure
                 </h2>
                 
-                <div class="space-y-6">
-                    <p class="text-lg md:text-xl text-gray-100 leading-relaxed">
-                        Get instant pricing tailored to your specific logistics requirements
+                <div class="space-y-6 px-4">
+                    <p class="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+                        Obtain immediate rate confirmation based on your shipment specifications
                     </p>
-                    
-                    <div class="bg-white/10 p-6 rounded-xl backdrop-blur-sm border border-white/10">
-                        <p class="text-gray-200 mb-4 text-lg">
-                            For immediate rate confirmation on finalized shipments:
-                        </p>
-                        <button 
-                            onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Courier Rate Request - Shipment Particulars&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request the current rate for my shipment based on the following particulars:%0d%0a%0d%0a[ Pickup Details ]%0d%0aCompany Name: %0d%0aContact Person: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Delivery Details ]%0d%0aRecipient Name: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Shipment Particulars ]%0d%0aType: (Document/Parcel)%0d%0aWeight: %0d%0aDimensions: %0d%0aContents: %0d%0aDeclared Value: %0d%0aSpecial Instructions: %0d%0a%0d%0aPlease confirm your rate and service availability for this specific shipment.%0d%0a%0d%0aContact Information:%0d%0aName: %0d%0aEmail: %0d%0aPhone: %0d%0a%0d%0aBest regards,%0d%0a[Your Full Name]'"
-                            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full 
-                                   hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 
-                                   shadow-lg hover:shadow-xl transform hover:scale-105">
-                            Get Instant Rate Quote
-                        </button>
+        
+                    <div class="bg-white/5 p-8 rounded-2xl backdrop-blur-lg border border-white/10 shadow-xl">
+                        <div class="space-y-4">
+                            <p class="text-gray-300 text-lg">
+                                Provide shipment details through our structured format for accurate rate calculation
+                            </p>
+                            
+                            <button 
+                                onclick="smoothScroll('contact')"
+                                class="bg-gradient-to-r from-blue-400 to-blue-600 text-white font-semibold py-3 px-8 rounded-full
+                                       hover:from-blue-300 hover:to-blue-500 transition-all duration-300 
+                                       shadow-lg hover:shadow-xl transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                Get Rate Details
+                            </button>
+                        </div>
                     </div>
         
                     <p class="text-gray-300 mt-6 text-md md:text-lg max-w-3xl mx-auto">
-                        For complex requirements or premium services, contact our logistics specialists directly 
-                        <a href="mailto:ominternationalcep@gmail.com" class="text-yellow-400 hover:text-yellow-300 underline">via email</a>.
+                        For complex requirements or premium services, visit our 
+                        <a href="#contact" class="text-yellow-400 hover:text-yellow-300 underline">Contact Section</a> 
+                        for personalized assistance
                     </p>
                 </div>
             </div>
         </section>
+        
+        <script>
+            function smoothScroll(targetId) {
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        </script>
+        
+        <style>
+            /* Fix header overlap */
+            #rates {
+                padding-top: 5rem; /* Adjusted for sticky header */
+                scroll-margin-top: 4rem; /* Space for header */
+            }
+        
+            /* Enhanced responsive padding */
+            @media (min-width: 768px) {
+                #rates {
+                    padding-top: 7rem;
+                    scroll-margin-top: 5rem;
+                }
+            }
+        
+            /* Header z-index fix */
+            .header {
+                z-index: 50 !important; /* Ensure header stays on top */
+            }
+        
+            /* Button transition polish */
+            button {
+                transition-property: transform, box-shadow, background;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        </style>
         
         <section id="area" class="section bg-gray-100 py-12 px-4 text-center rounded-md">
             <h2 class="text-2xl font-bold mb-6 text-blue-700">Service Areas</h2>
