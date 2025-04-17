@@ -32,10 +32,18 @@
     </script>
     <style>
         /* Global Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f9fafb;
+            margin: 0;
+            padding: 0;
+        }
+
         .header {
             background-color: #000;
             color: #fff;
-            padding: 0.75rem 0;
+            padding: 1rem 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -47,7 +55,7 @@
         }
 
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
             margin-left: 1rem;
             display: flex;
@@ -55,10 +63,11 @@
         }
 
         .logo img {
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
             border-radius: 50%;
-            height: 30px;
-            width: 30px;
+            height: 40px;
+            width: 40px;
+            /* Increased logo size */
         }
 
         .nav ul {
@@ -69,13 +78,14 @@
         }
 
         .nav ul li {
-            margin-left: 1.5rem;
+            margin-left: 2rem;
         }
 
         .nav ul li a {
             color: #fff;
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .nav ul li a:hover {
@@ -83,14 +93,15 @@
         }
 
         .section {
-            padding: 6rem 0;
-            scroll-margin-top: 5rem;
+            padding: 8rem 0;
+            scroll-margin-top: 6rem;
+            text-align: center;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             position: relative;
             display: inline-block;
             color: #f59e0b;
@@ -99,21 +110,83 @@
         h2::after {
             content: '';
             position: absolute;
-            bottom: -1rem;
+            bottom: -1.25rem;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
+            width: 100px;
+            height: 6px;
             background: #f59e0b;
-            border-radius: 2px;
+            border-radius: 3px;
         }
 
         /* Hero Section */
         .hero {
             background-size: cover;
             background-position: center;
-            min-height: 600px;
+            min-height: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Updated opacity */
+            backdrop-filter: blur(10px);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 80%;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: #f59e0b;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            line-height: 1.75;
+            margin-bottom: 3rem;
+            color: #fff;
+        }
+
+        .hero-content button {
+            background-color: #f59e0b;
+            color: #111827;
+            font-weight: 600;
+            padding: 1.25rem 3rem;
+            border-radius: 1rem;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border: none;
+        }
+
+        .hero-content button:hover {
+            background-color: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
 
         /* Services Section */
         #services {
@@ -122,136 +195,406 @@
             background-position: center;
         }
 
+        #services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Updated opacity */
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+
         .service-grid {
-            gap: 2rem;
-            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 90%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
-            color: #fff;
+            color: #ffffff;
+            text-align: center;
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .service-icon {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
+            border-radius: 1.5rem;
             padding: 1.5rem;
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .service-icon img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* Ensure image fits within the container */
+        }
+
 
         .service-card h3 {
             color: #f59e0b;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
         }
+
+        .service-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+
 
         /* Rates Section */
         #rates {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            position: relative;
+            overflow: hidden;
         }
+
+        #rates::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Updated opacity */
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        .rates-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 0 2rem;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        #rates h2 {
+            color: #f59e0b;
+            margin-bottom: 3rem;
+        }
+
+
+        #rates p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 3rem;
+        }
+
+        #rates button {
+            background-color: #f59e0b;
+            color: #111827;
+            font-weight: 600;
+            padding: 1.25rem 3rem;
+            border-radius: 1rem;
+            font-size: 1.25rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border: none;
+        }
+
+        #rates button:hover {
+            background-color: #d97706;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
 
         /* Service Areas Section */
         #area {
             background-image: url('https://media.istockphoto.com/id/1165790881/vector/global-logistics-network-isometric-illustration-icons-set-of-air-cargo-trucking-rail.jpg?s=612x612&w=0&k=20&c=9vnBu44rKJ7Gab_zh7SNZ9OJGX2woADAvnNq71MDyOk=');
             background-size: cover;
             background-position: center;
+            position: relative;
         }
 
-        #area .bg-white {
-            background: rgba(255, 255, 255, 0.05) !important;
+        #area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Updated opacity */
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #fff;
+            z-index: 0;
         }
+
+        #area h2 {
+            color: #f59e0b;
+            margin-bottom: 3rem;
+        }
+
+        #area p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        #area .state-list {
+            background: rgba(255, 255, 255, 0.05);
+            /* Updated opacity */
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 0 auto;
+            max-width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        #area .state-list h3 {
+            color: #f59e0b;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #area .state-list ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #ffffff;
+        }
+
 
         /* Contact Section */
         #contact {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            position: relative;
+            overflow: hidden;
         }
 
+        #contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Updated opacity */
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        #contact h2 {
+            color: #f59e0b;
+            margin-bottom: 3rem;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            /* Updated opacity */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            backdrop-filter: blur(15px);
+            margin: 0 auto;
+            max-width: 90%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-form p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ffffff;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .contact-details strong {
+            color: #f59e0b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-details a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: #f59e0b;
+        }
+
+
         /* Tracking Section */
-        .tracking-section {
+        #track-shipment {
             background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
+            position: relative;
+            padding: 8rem 0;
         }
+
+        #track-shipment::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Updated opacity */
+            backdrop-filter: blur(10px);
+            z-index: 0;
+        }
+
+        #track-shipment h2 {
+            color: #f59e0b;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        #track-shipment p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
 
         .tracking-form {
             background: rgba(255, 255, 255, 0.05);
+            /* Updated opacity */
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 1rem;
-            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 1.5rem;
+            backdrop-filter: blur(15px);
+            margin: 0 auto;
+            max-width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 1rem;
-            max-width: 400px;
-            margin: 0 auto;
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
 
         .tracking-form select,
         .tracking-form button {
-            color: #000;
-            padding: 0.75rem;
-            border-radius: 0.5rem;
+            padding: 0.8rem;
+            border-radius: 0.75rem;
             width: 100%;
-            max-width: 100%;
+            max-width: 400px;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #ffffff;
+            color: #111827;
         }
 
         .tracking-form button {
             background-color: #f59e0b;
-            color: #000;
-            font-weight: bold;
+            color: #111827;
+            font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: none;
         }
 
         .tracking-form button:hover {
             background-color: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
+
 
         /* Partners Section */
         #partner-logos {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 8rem 0;
+        }
+
+        #partner-logos h2 {
+            color: #f59e0b;
+            margin-bottom: 3rem;
         }
 
         .logo-grid {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            padding: 1rem 0;
-            gap: 1rem;
+            gap: 2rem;
+            max-width: 90%;
+            margin: 0 auto;
         }
 
         .logo-img {
-            padding: 1rem;
-            border-radius: 0.5rem;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
             transition: all 0.3s ease;
-            height: 60px;
+            height: 80px;
+            /* Increased logo size */
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 120px;
+            min-width: 150px;
+            /* Increased minimum width */
             background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .logo-img:hover {
-            transform: scale(1.05) rotate(-2deg);
+            transform: scale(1.08) rotate(-3deg);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
         .white-logo {
@@ -270,27 +613,47 @@
             background-color: #800080;
         }
 
+
+        /* Footer */
+        .footer {
+            background-color: #111827;
+            color: #ffffff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 6rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .header {
-                padding: 1rem 0;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin: 0 auto 1rem;
             }
 
             .nav {
                 display: none;
             }
 
-            .logo {
-                margin: 0 auto;
+            .section {
+                padding: 6rem 0;
             }
 
             h2 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
-            .section {
-                padding: 4rem 0;
-                scroll-margin-top: 4rem;
+            .hero-content h1 {
+                font-size: 3.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
             }
 
             .service-grid {
@@ -298,7 +661,7 @@
             }
 
             .service-card {
-                padding: 1.5rem;
+                padding: 2rem;
             }
 
             .tracking-form {
@@ -307,7 +670,6 @@
 
             .logo-grid {
                 flex-wrap: wrap;
-                overflow-x: auto;
             }
 
             .logo-img {
@@ -316,17 +678,45 @@
             }
         }
 
-        .footer {
-            background-color: #000;
+        /* Mobile menu button (optional - if you want a mobile menu) */
+        .mobile-menu-button {
+            display: none;
+            background-color: transparent;
+            border: none;
             color: #fff;
-            padding: 1rem;
-            text-align: center;
-            margin-top: 4rem;
+            font-size: 2rem;
+            cursor: pointer;
+            margin-right: 1rem;
         }
 
-        #track-shipment {
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+        @media (max-width: 768px) {
+            .mobile-menu-button {
+                display: block;
+            }
+
+            .nav {
+                display: none;
+                /* Initially hide the nav on small screens */
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+                background-color: #000;
+                /* Style as needed */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav ul {
+                flex-direction: column;
+            }
+
+            .nav ul li {
+                margin: 1rem 0;
+            }
+
+            .header.active .nav {
+                display: block;
+                /* Show the nav when the header hasthe 'active' class */
+            }
         }
     </style>
 </head>
@@ -334,7 +724,8 @@
 <body class="bg-gray-900 text-gray-100">
     <header class="header">
         <div class="logo">
-            <img src="https://i.pinimg.com/736x/88/0d/09/880d092406f5fa5f08b2074c6787eaf4.jpg" class="rounded-full">
+            <img src="https://i.pinimg.com/736x/88/0d/09/880d092406f5fa5f08b2074c6787eaf4.jpg" class="rounded-full"
+                alt="OM International Courier Logo">
             <span class="text-yellow-400 mr-1">OM</span> International Courier
         </div>
         <nav class="nav">
@@ -346,37 +737,36 @@
                 <li><a href="#partner-logos">Partners</a></li>
             </ul>
         </nav>
+        <button class="mobile-menu-button" id="mobile-menu-btn">
+            ☰
+        </button>
     </header>
 
     <main>
-        <section
-            class="hero bg-cover bg-no-repeat bg-center text-center py-12 px-4 rounded-md flex flex-col justify-center items-center relative overflow-hidden min-h-[500px]"
+        <section class="hero"
             style="background-image: url('https://img.pikbest.com/backgrounds/20200423/2d-labor-day-delivery-banner_1910020.jpg!sw800')">
-            <div class="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>
-
-            <div class="relative z-10 max-w-4xl w-full px-4 space-y-6">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-yellow-400 drop-shadow-lg">
+            <div class="hero-content">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-yellow-400">
                     Your Trusted Courier Partner
                 </h1>
-                <p class="text-lg md:text-xl mb-6 text-gray-100 max-w-2xl mx-auto leading-relaxed font-medium">
+                <p class="text-lg md:text-xl mb-6 text-gray-100 max-w-3xl mx-auto">
                     Bridging Distances, Delivering Trust – Seamless Domestic & International Shipping Solutions
                 </p>
                 <p class="text-md md:text-lg mb-8 text-white font-semibold">
-                    <span class="bg-gradient-to-r from-blue-600 to-green-500 px-6 py-2 rounded-full inline-block">
+                    <span class="bg-gradient-to-r from-blue-600 to-green-500 px-8 py-3 rounded-full inline-block">
                         ✈ From Delhi to the World!
                     </span>
                 </p>
                 <button
-                    onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'"
-                    class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full shadow-2xl py-4 px-10 transition-all duration-300 text-lg md:text-xl transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-500/50">
+                    onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Quotation Request&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request a quotation for courier services. Please find my company details below:%0d%0a%0d%0aCompany Name:%0d%0aCompany Address:%0d%0aContact Person:%0d%0aPhone Number:%0d%0aEmail Address:%0d%0a%0d%0aLooking forward to hearing from you soon.%0d%0a%0d%0aSincerely,%0d%0a[Your Name]'">
                     Get Instant Quote
                 </button>
             </div>
         </section>
 
-        <section id="services" class="section text-center rounded-md">
-            <h2 class="text-2xl font-bold mb-6 text-blue-700">Our Services</h2>
-            <div class="service-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="service-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="https://images.seeklogo.com/logo-png/48/2/food-delivery-symbol-logo-png_seeklogo-486549.png"
@@ -426,7 +816,8 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="https://cdn-icons-png.flaticon.com/512/14367/14367953.png" alt="Franchise Adaptability">
+                        <img src="https://cdn-icons-png.flaticon.com/512/14367/14367953.png"
+                            alt="Franchise Adaptability">
                     </div>
                     <h3>Adaptability to Franchises</h3>
                     <p>
@@ -436,92 +827,35 @@
             </div>
         </section>
 
-        <section id="rates" class="section relative py-16 px-4 text-center overflow-hidden"
-            style="scroll-margin-top: 100px;">
-            <div
-                class="absolute inset-0 bg-[url('https://previews.123rf.com/images/gmast3r/gmast3r1604/gmast3r160400443/55343577-truck-lorry-car-on-road-cargo-shipping-delivery-banner-flat-vector-illustration.jpg')] bg-cover bg-center">
-            </div>
-            <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
-
-            <div class="relative z-10 max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-yellow-400 drop-shadow-md">
-                    Competitive Shipping Rates
-                </h2>
-
-                <div class="space-y-6 px-4">
-                    <p class="text-lg md:text-xl text-gray-100 leading-relaxed max-w-3xl mx-auto">
-                        For immediate rate confirmation on finalized shipments, submit your particulars using our structured
-                        template:
-                    </p>
-
-                    <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/10">
-                        <button
-                            onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Courier Rate Request - Shipment Particulars&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request the current rate for my shipment based on the following particulars:%0d%0a%0d%0a[ Pickup Details ]%0d%0aCompany Name: %0d%0aContact Person: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Delivery Details ]%0d%0aRecipient Name: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Shipment Particulars ]%0d%0aType: (Document/Parcel)%0d%0aWeight: %0d%0aDimensions: %0d%0aContents: %0d%0aDeclared Value: %0d%0aSpecial Instructions: %0d%0a%0d%0aPlease confirm your rate and service availability for this specific shipment.%0d%0a%0d%0aContact Information:%0d%0aName: %0d%0aEmail: %0d%0aPhone: %0d%0a%0d%0aBest regards,%0d%0a[Your Full Name]'"
-                            class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-full                                     hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300                                     shadow-lg hover:shadow-xl transform hover:scale-105 text-lg md:text-xl">
-                            Request Rate Details
-                        </button>
-                    </div>
-
-                    <p class="text-gray-300 mt-6 text-md md:text-lg max-w-3xl mx-auto">
-                        For complex requirements or premium services, visit our
-                        <a href="#contact" class="text-yellow-400 hover:text-yellow-300 underline"
-                            onclick="smoothScroll('contact')">Contact Section</a>
-                        for personalized assistance
-                    </p>
-                </div>
+        <section id="rates" class="section">
+            <div class="rates-content">
+                <h2>Competitive Shipping Rates</h2>
+                <p>
+                    For immediate rate confirmation on finalized shipments, submit your particulars using our structured
+                    template:
+                </p>
+                <button
+                    onclick="window.location.href='mailto:ominternationalcep@gmail.com?subject=Courier Rate Request - Shipment Particulars&body=Dear OM International Courier Team,%0d%0a%0d%0aI would like to request the current rate for my shipment based on the following particulars:%0d%0a%0d%0a[ Pickup Details ]%0d%0aCompany Name: %0d%0aContact Person: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Delivery Details ]%0d%0aRecipient Name: %0d%0aAddress: %0d%0aCity: %0d%0aCountry: %0d%0a%0d%0a[ Shipment Particulars ]%0d%0aType: (Document/Parcel)%0d%0aWeight: %0d%0aDimensions: %0d%0aContents: %0d%0aDeclared Value: %0d%0aSpecial Instructions: %0d%0a%0d%0aPlease confirm your rate and service availability for this specific shipment.%0d%0a%0d%0aContact Information:%0d%0aName: %0d%0aEmail: %0d%0aPhone: %0d%0a%0d%0aBest regards,%0d%0a[Your Full Name]'">
+                    Request Rate Details
+                </button>
+                <p class="mt-6 text-md md:text-lg">
+                    For complex requirements or premium services, visit our
+                    <a href="#contact" class="text-yellow-400 hover:text-yellow-300 underline"
+                        onclick="smoothScroll('contact')">Contact Section</a>
+                    for personalized assistance
+                </p>
             </div>
         </section>
 
-        <script>
-            function smoothScroll(targetId) {
-                const element = document.getElementById(targetId);
-                const offset = 100; // Adjust this value based on header height
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = element.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        </script>
-
-        <style>
-            /* Header Spacing Fix */
-            #rates {
-                padding-top: 6rem;
-                scroll-margin-top: 5rem;
-            }
-
-            .header {
-                z-index: 1000;
-            }
-
-            /* Responsive Adjustments */
-            @media (max-width: 768px) {
-                #rates {
-                    padding-top: 4rem;
-                    scroll-margin-top: 4rem;
-                }
-
-                button {
-                    padding: 0.75rem 1.5rem;
-                    font-size: 1rem;
-                }
-            }
-        </style>
-
-        <section id="area" class="section text-center rounded-md">
-            <h2 class="text-2xl font-bold mb-6 text-blue-700">Service Areas</h2>
-            <p class="text-lg text-gray-700 mb-4">
+        <section id="area" class="section">
+            <h2>Service Areas</h2>
+            <p class="text-lg">
                 We operate primarily from New Delhi, with a strong network to serve a wide range of locations.
             </p>
-            <div class="flex flex-wrap justify-center gap-4 mt-6">
-                <div class="bg-white rounded-md shadow-md p-4 text-center w-48 hover:shadow-lg transition-duration-300">
-                    <h3 class="font-semibold text-blue-600 mb-2">North India</h3>
-                    <ul style="text-align: left" class="list-disc list-inside text-gray-700">
+            <div class="state-list">
+                <div>
+                    <h3>North India</h3>
+                    <ul>
                         <li>Delhi</li>
                         <li>NCR</li>
                         <li>Haryana</li>
@@ -532,9 +866,9 @@
                         <li>Jammu & Kashmir</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-md shadow-md p-4 text-center w-48 hover:shadow-lg transition-duration-300">
-                    <h3 class="font-semibold text-blue-600 mb-2">East India</h3>
-                    <ul style="text-align: left" class="list-disc list-inside text-gray-700">
+                <div>
+                    <h3>East India</h3>
+                    <ul>
                         <li>Bihar</li>
                         <li>Jharkhand</li>
                         <li>West Bengal</li>
@@ -542,18 +876,18 @@
                         <li>North East States</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-md shadow-md p-4 text-center w-48 hover:shadow-lg transition-duration-300">
-                    <h3 class="font-semibold text-blue-600 mb-2">West India</h3>
-                    <ul style="text-align: left" class="list-disc list-inside text-gray-700">
+                <div>
+                    <h3>West India</h3>
+                    <ul>
                         <li>Maharashtra</li>
                         <li>Gujarat</li>
                         <li>Madhya Pradesh</li>
                         <li>Goa</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-md shadow-md p-4 text-center w-48 hover:shadow-lg transition-duration-300">
-                    <h3 class="font-semibold text-blue-600 mb-2">South India</h3>
-                    <ul style="text-align: left" class="list-disc list-inside text-gray-700">
+                <div>
+                    <h3>South India</h3>
+                    <ul>
                         <li>Karnataka</li>
                         <li>Tamil Nadu</li>
                         <li>Andhra Pradesh</li>
@@ -562,66 +896,52 @@
                     </ul>
                 </div>
             </div>
-            <p class="mt-6 text-gray-600 text-lg">
+            <p class="mt-6 text-md">
                 For international shipments and specific service areas, please <a href="#contact"
-                    class="text-blue-500 hover:text-blue-700 font-semibold no-underline">contact us</a> for detailed service
+                    class="text-blue-400 hover:text-blue-300 font-semibold no-underline">contact us</a> for detailed service
                 availability and arrangements.
             </p>
         </section>
 
-        <section id="contact" class="section relative py-16 px-4 text-center overflow-hidden">
-            <div
-                class="absolute inset-0 bg-[url('https://t4.ftcdn.net/jpg/05/86/20/87/360_F_586208777_ff5IARSx9mR3y3hmfMYDTrQyQE4cA5nY.jpg')] bg-cover bg-center">
-            </div>
-            <div class="absolute inset-0 bg-gray-900/60 backdrop-blur-sm"></div>
-
-            <div class="relative z-10 max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-yellow-400 drop-shadow-md">
-                    Get In Touch
-                </h2>
-
-                <div class="bg-white/10 p-8 rounded-2xl backdrop-blur-lg border border-white/10 shadow-xl max-w-md mx-auto">
-                    <p class="text-lg text-gray-200 mb-6">
-                        Reach out for quotes, support, or partnership opportunities
-                    </p>
-
-                    <div class="space-y-4 text-gray-300">
-                        <div class="contact-method">
-                            <strong class="block text-yellow-400 mb-1">Phone:</strong>
-                            <a href="tel:+919560264547" class="hover:text-yellow-300 transition-colors">
-                                +91 9560264547
-                            </a>,
-                            <a href="tel:+918766338468" class="hover:text-yellow-300 transition-colors">
-                                +91 8766338468
-                            </a>
-                        </div>
-
-                        <div class="contact-method">
-                            <strong class="block text-yellow-400 mb-1">Email:</strong>
-                            <a href="mailto:ominternationalcep@gmail.com"
-                                class="hover:text-yellow-300 transition-colors break-all">
-                                ominternationalcep@gmail.com
-                            </a>
-                        </div>
-
-                        <div class="contact-method mt-6">
-                            <strong class="block text-yellow-400 mb-2">Office Address:</strong>
-                            <p class="text-gray-200 leading-relaxed">
-                                253, A/6, 2nd Floor<br>
-                                Shahpur Jat, New Delhi-110049
-                            </p>
-                        </div>
+        <section id="contact" class="section">
+            <h2>Get In Touch</h2>
+            <div class="contact-form">
+                <p class="text-lg">
+                    Reach out for quotes, support, or partnership opportunities
+                </p>
+                <div class="contact-details">
+                    <div>
+                        <strong>Phone:</strong>
+                        <a href="tel:+919560264547" class="hover:text-yellow-300 transition-colors">
+                            +91 9560264547
+                        </a>,
+                        <a href="tel:+918766338468" class="hover:text-yellow-300 transition-colors">
+                            +91 8766338468
+                        </a>
+                    </div>
+                    <div>
+                        <strong>Email:</strong>
+                        <a href="mailto:ominternationalcep@gmail.com"
+                            class="hover:text-yellow-300 transition-colors break-all">
+                            ominternationalcep@gmail.com
+                        </a>
+                    </div>
+                    <div class="mt-4">
+                        <strong>Office Address:</strong>
+                        <p class="text-gray-200">
+                            253, A/6, 2nd Floor<br>
+                            Shahpur Jat, New Delhi-110049
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="track-shipment" class="tracking-section py-16 px-4 text-center">
-            <h2 class="text-2xl font-bold mb-4 text-blue-700">Track Your Shipment</h2>
-            <p class="text-lg text-gray-700 mb-6">
+        <section id="track-shipment" class="tracking-section">
+            <h2>Track Your Shipment</h2>
+            <p class="text-lg">
                 Select a courier partner to track your shipment.
             </p>
-
             <div class="tracking-form">
                 <select id="courier-partner">
                     <option value="dtdc">DTDC</option>
@@ -635,12 +955,13 @@
             </div>
         </section>
 
-        <section id="partner-logos" class="section text-center">
-            <h2 class="text-2xl font-bold mb-6 text-blue-700">Our Partners</h2>
+        <section id="partner-logos" class="section">
+            <h2>Our Partners</h2>
             <div class="logo-grid">
                 <img class="logo-img white-logo" src="https://www.dtdc.in/img/logos/logo.png" alt="DTDC Logo">
                 <img class="logo-img white-logo" src="https://www.tpcindia.com/images/logo.png" alt="Professional Couriers Logo">
-                <img class="logo-img gold-logo" src="https://www.bluedart.com/image/layout_set_logo?img_id=1414225&t=1743950364083"
+                <img class="logo-img gold-logo"
+                    src="https://www.bluedart.com/image/layout_set_logo?img_id=1414225&t=1743950364083"
                     alt="BlueDart Logo">
                 <img class="logo-img black-logo" src="https://www.delhivery.com/_nuxt/img/Delhivery_logo.dcef706.png"
                     alt="Delhivery Logo">
@@ -724,6 +1045,11 @@
                 alert(`Phone number ${phoneNumber} copied to clipboard!`);
             }
         }
+
+        // Mobile menu toggle functionality
+        document.getElementById('mobile-menu-btn').addEventListener('click', function () {
+            document.querySelector('.header').classList.toggle('active');
+        });
     </script>
 </body>
 
