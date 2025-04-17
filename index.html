@@ -222,6 +222,7 @@
         }
 
         .service-card {
+            position: relative;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 1.5rem;
             padding: 2.5rem;
@@ -238,8 +239,20 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
+        .service-card:hover::after {
+          content: '';
+          position: absolute;
+          top: 2.5rem; /* Match padding */
+          left: 2.5rem;
+          right: 2.5rem;
+          bottom: 2.5rem;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 1rem; /* Adjust to match inner corner radius */
+          z-index: -1; /* Place behind content */
+        }
+
         .service-icon {
-            background: rgba(255, 255, 255, 1);
+            background: rgba(255, 255, 255, 0.6);
             border-radius: 1.5rem;
             padding: 1.5rem;
             width: 100px;
