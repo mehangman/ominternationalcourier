@@ -194,6 +194,8 @@
             background-image: url('https://www.shutterstock.com/image-vector/contact-us-customer-support-hotline-600nw-2402878041.jpg');
             background-size: cover;
             background-position: center;
+            position: relative;
+            overflow: hidden;
         }
 
         #services::before {
@@ -214,22 +216,28 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
-            max-width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
+            padding: 0 2rem 4rem;
             position: relative;
             z-index: 1;
-            justify-content: center; /* Added to center the cards */
         }
 
         .service-card {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 1.5rem;
-            padding: 2.5rem;
-            backdrop-filter: blur(15px);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             color: #ffffff;
             text-align: center;
+            margin: 0 auto;
+            max-width: 350px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .service-card:hover {
@@ -431,7 +439,8 @@
             background: rgba(255, 255, 255, 0.05);
             /* Updated opacity */
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem; /* Reduced padding from 3rem to 2rem */
+            padding: 2rem;
+            /* Reduced padding from 3rem to 2rem */
             border-radius: 1.5rem;
             backdrop-filter: blur(15px);
             margin: 0 auto;
@@ -445,7 +454,8 @@
             font-size: 1.2rem;
             line-height: 1.8;
             color: #ffffff;
-            margin-bottom: 1.5rem; /* Reduced margin-bottom from 2rem to 1.5rem */
+            margin-bottom: 1.5rem;
+            /* Reduced margin-bottom from 2rem to 1.5rem */
         }
 
         .contact-details {
@@ -453,7 +463,8 @@
             line-height: 1.8;
             color: #ffffff;
             text-align: left;
-            margin-bottom: 1.5rem; /* Reduced margin-bottom from 2rem to 1.5rem */
+            margin-bottom: 1.5rem;
+            /* Reduced margin-bottom from 2rem to 1.5rem */
         }
 
         .contact-details strong {
@@ -516,7 +527,8 @@
             background: rgba(255, 255, 255, 0.05);
             /* Updated opacity */
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2rem; /* Reduced padding */
+            padding: 2rem;
+            /* Reduced padding */
             border-radius: 1.5rem;
             backdrop-filter: blur(15px);
             margin: 0 auto;
@@ -699,7 +711,7 @@
             .nav {
                 display: none;
                 /* Initially hide the nav on small screens */
-                width: 100%;
+width: 100%;
                 text-align: center;
                 padding: 1rem 0;
                 background-color: #000;
